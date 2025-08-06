@@ -1,10 +1,10 @@
-# 🧠 Building a Data Analytics Agent using LLMs
+# Building a Data Analytics Agent using LLMs
 
 This project demonstrates how to build an intelligent **data analytics agent** using **Large Language Models (LLMs)** with the `LangChain` and `Groq API` frameworks. The notebook walks you through setting up the environment, connecting to the LLM, and interacting with your data through natural language queries.
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Introduction](#introduction)
 - [Setup and Installation](#setup-and-installation)
@@ -14,17 +14,16 @@ This project demonstrates how to build an intelligent **data analytics agent** u
 - [Use Cases Implemented](#use-cases-implemented)
 - [Technologies Used](#technologies-used)
 - [How to Run](#how-to-run)
-- [License](#license)
 
 ---
 
-## 🧩 Introduction
+## Introduction
 
 This notebook enables a **conversational interface for data analysis** using LLMs. With tools like `LangChain` and `Groq`, you can analyze data by asking natural language questions and receive actionable insights — without writing any SQL queries or manual code.
 
 ---
 
-## ⚙️ Setup and Installation
+## Setup and Installation
 
 Install the required Python libraries:
 
@@ -41,12 +40,9 @@ langchain_groq → Connecting with LLM through Groq API
 
 pandasai → Conversational querying over pandas dataframes
 
-🔌 LLM Initialization (Groq API)
+LLM Initialization (Groq API)
 To interact with the LLM, initialize it using the Groq API with LangChain:
 
-python
-Copy
-Edit
 from langchain_groq import ChatGroq
 
 llm = ChatGroq(
@@ -56,12 +52,9 @@ llm = ChatGroq(
 )
 Replace "your_api_key_here" with your actual Groq API key.
 
-🧠 Agent Preparation
+Agent Preparation
 An agent is created using create_pandas_dataframe_agent from LangChain. This allows the LLM to process natural language queries on a pandas dataframe:
 
-python
-Copy
-Edit
 from langchain.agents.agent_tools import create_pandas_dataframe_agent
 
 agent = create_pandas_dataframe_agent(
@@ -71,10 +64,10 @@ agent = create_pandas_dataframe_agent(
 )
 The agent interprets user prompts, performs reasoning using the LLM, and executes relevant operations on the dataframe.
 
-💬 Conversational Data Analysis
+Conversational Data Analysis
 Once the agent is initialized, you can interact with your dataset by typing natural language questions.
 
-✅ Example Queries:
+Example Queries:
 "What are the top 5 job categories?"
 
 "Find a job that requires a Master's degree and is remote."
@@ -85,7 +78,7 @@ Once the agent is initialized, you can interact with your dataset by typing natu
 
 The agent uses the LLM to understand the question, run necessary data operations, and return meaningful answers.
 
-🧪 Use Cases Implemented
+Use Cases Implemented
 Job Search Filtering
 Query jobs based on title, industry, education level, remote work percentage, or experience level.
 
@@ -98,7 +91,7 @@ Summarize key data patterns, such as top companies, job types, or average salari
 Natural Language Querying
 No code or SQL needed — just ask questions in plain English.
 
-🧰 Technologies Used
+Technologies Used
 Python – Core programming language
 
 pandas – Dataframe operations
@@ -111,7 +104,7 @@ Groq API – High-speed LLM inference
 
 pandasai – Conversational interaction with structured data
 
-▶️ How to Run
+How to Run
 Clone or download the repository.
 
 Open the notebook Building_a_Data_Analytics_Agent_using_LLMs.ipynb in Jupyter or Colab.
@@ -124,4 +117,3 @@ Load your dataset as a pandas dataframe.
 
 Run the notebook cells in order.
 
-Ask questions and get insights through natural language queries.
